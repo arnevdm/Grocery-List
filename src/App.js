@@ -7,8 +7,18 @@ const App = () => {
 	// HINT: each "item" in our list names a name, a boolean to tell if its been completed, and a quantity
 	const [items, setItems] = useState([
 		{ 
-		itemName: "item1", 
+		itemName: "item 1", 
 		quantity:1,
+		isSelected: false
+	},
+		{ 
+		itemName: "item 2", 
+		quantity:3,
+		isSelected: false
+	},
+		{ 
+		itemName: "item 3", 
+		quantity:2,
 		isSelected: false
 	},
 	]);
@@ -21,7 +31,7 @@ const App = () => {
 					<FontAwesomeIcon icon={faPlus} />
 				</div>
 				<div className='item-list'>
-					<div className='item-container'>
+					{items.map((item, index) => <div className='item-container'>
 						<div className='item-name'>
 							{/* HINT: replace false with a boolean indicating the item has been completed or not */}
 							{false ? (
@@ -45,7 +55,8 @@ const App = () => {
 								<FontAwesomeIcon icon={faChevronRight} />
 							</button>
 						</div>
-					</div>
+					</div>)}
+					
 				</div>
 				<div className='total'>Total: 6</div>
 			</div>
