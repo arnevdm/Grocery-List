@@ -5,7 +5,13 @@ import { faChevronRight, faChevronLeft, faCircle, faCheckCircle, faPlus } from '
 
 const App = () => {
 	// HINT: each "item" in our list names a name, a boolean to tell if its been completed, and a quantity
-	const [items, setItems] = useState([]);
+	const [items, setItems] = useState([
+		{ 
+		itemName: "item1", 
+		quantity:1,
+		isSelected: false
+	},
+	]);
 
 	return (
 		<div className='app-background'>
